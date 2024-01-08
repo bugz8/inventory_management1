@@ -12,6 +12,15 @@ const crypto = require('crypto');
 // Import the auth route
 const authRoutes = require('./routes/api/auth');
 
+// Import additional route files
+const userRoutes = require('./routes/router/users');
+const inventoryRoutes = require('./routes/router/inventory');
+const dashboardRoutes = require('./routes/router/dashboard');
+const basicDataRoutes = require('./routes/router/basicData');
+const coatsRoutes = require('./routes/router/coats');
+const conditionsRoutes = require('./routes/router/conditions');
+const adminUsersRoutes = require('./routes/router/adminUsers');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -73,10 +82,17 @@ passport.deserializeUser(async (id, done) => {
   }
 });
 
-// Routes
+// Use the auth route
 app.use('/api', authRoutes);
-app.use('/api', userRoutes);
-app.use('/api', inventoryRoutes);
+
+// Use additional route files
+app.use('/api/users', userRoutes);
+app.use('/api/inventory', inventoryRoutes);
+app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/basicdata', basicDataRoutes);
+app.use('/api/coats', coatsRoutes);
+app.use('/api/conditions', conditionsRoutes);
+app.use('/api/admin_users', adminUsersRoutes);
 
 // Error handler
 app.use(errorHandler);
