@@ -1,0 +1,47 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #1F1717;
+}
+
+/* Container styles */
+.container {
+    margin-top: 2rem;
+}
+
+/* Card styles */
+.card {
+    margin-top: 1rem;
+}
+
+/* Form styles */
+.form-control {
+    margin-bottom: 1rem;
+}
+
+/* Submit button styles */
+.btn-primary {
+    background-color: #4CAF50 !important; /* Change to your desired color */
+    border-color: #4CAF50 !important; /* Change border color if needed */
+}
+
+.btn-primary:hover {
+    background-color: #45a049 !important; /* Change hover color */
+    border-color: #45a049 !important; /* Change hover border color if needed */
+}
+
+#registerButton {
+    background-color: #1F1717 !important; /* Change hover color */
+    border-color: #1F1717 !important; /* Change hover border color if needed */
+}
+
+.black_button {
+    background-color: #1F1717 !important; /* Change hover color */
+    border-color: #1F1717 !important; /* Change hover border color if needed */
+}
+
+.black_button:hover {
+    background-color: #1f1717de !important; /* Change hover color */
+    border-color: #1F1717 !important; /* Change hover border color if needed */
+}
